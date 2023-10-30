@@ -1,0 +1,45 @@
+---
+title: "R for Bio Data Science project"
+format: html
+editor: visual
+---
+
+```{r}
+#load the necessary packages
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(devtools)
+
+```
+
+```{r}
+#We have to install the PharmacoGx package in order to gain access to the data
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("PharmacoGx")
+```
+
+```{r}
+#these are the data contained in the gCSI pharmacogenomic dataset
+gr_metrics <- vroom::vroom("gCSI_GRdata_v1.3.tsv/data/gCSI_GRmetrics_v1.3.tsv")
+gr_metrics
+```
+
+```{r}
+colnames(gr_metrics)
+```
+
+```{r}
+gr_values <- vroom::vroom("gCSI_GRdata_v1.3.tsv/data/gCSI_GRvalues_v1.3.tsv")
+gr_values
+```
+
+```{r}
+colnames(gr_metrics)
+```
+
+```{r}
+
+```

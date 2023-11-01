@@ -41,5 +41,14 @@ colnames(gr_metrics)
 ```
 
 ```{r}
+RNA_seg_data<- read_tsv('E-MTAB-2706/E-MTAB-2706.sdrf.txt', comment = '#')
+RNA_seg_data
+```
+
+```{r}
+colnames(RNA_seg_data)
+```
+
+```{r}
 
 ```
